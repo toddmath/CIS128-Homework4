@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Homework #4 (PWA)</title>
+  <!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  <!--Google Fonts-->
+  <link href="main.css" rel="stylesheet">
+  <link rel="preload" href="/img/lightblue.jpg" as="Background-Image">
+  <link rel="preload" href="img/lightgold.jpg" as="Background-Image">
+  <script src="https://code.jquery.com/jquery-3.4.0.slim.min.js"
+    integrity="sha256-ZaXnYkHGqIhqTbJ6MB4l9Frs/r7U4jlx7ir8PJYBqbI=" crossorigin="anonymous"></script>
+  <script src="background.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/swNew.js');
+      });
+    }
+  </script>
+
+</head>
+
+<body class="container">
+  <header role="banner">
+    <div class="header">
+      <h1 class="title">Progressive Web Applications</h1>
+    </div>
+    <div class="subheader">
+      <h2 class="subtitle">(PWA)</h2>
+    </div>
+  </header>
+
+  <main id="content" role="main">
+
+    <h4>About PWA's:</h4>
+    <p>Progressive web apps, or <abbr title="Progressive Web Application">PWA's</abbr>, are a major step forward
+      in helping make the modern web environment more progressive, both for developers and users alike.
+      There are a few security advantages in regards to <abbr>PWA's</abbr>, as well as performance enhancements.
+    </p>
+    <p>When developing a PWA, I reccomend testing it inside of Chrome, as it's
+      <code>chrome://serviceworker-internals</code> page is very useful for detailed information in regards to
+      all service worker state's.
+      Another chrome page that's helpful is <code>chrome://inspect/#service-workers</code>. It allows you to see
+      registered service workers, and inspect them if desired.
+      Not only does it give verbose information, it also allows some control over the service worker thru a
+      register/unregister button and a start/stop button, as well.</p>
+    <p>One of the major advantages gained with PWA's is reliability. No matter the network state of the client,
+      loading is instant because of it's use of service workers.
+      The service worker ensures that all necessary resources are cached inside the client's memory, ready to
+      answer requests whether online or offline!</p>
+    <p>Another advantage gained by developing a PWA is security. In order to qualify as a PWA, your app must use
+      the strictest security standards including HTTPS and HTTP/2.
+      Not only does this secure the server, it also gives customers and clients piece of mind. Studies prove
+      this piece of mind translates into more sales and profits for the site owners.
+    </p>
+
+    <span>
+      <h4>Background-Image:</h4>
+      <div class="styled-select">
+        <select id="select-background">
+          <option id="no-image" value=3 selected>None</option>
+          <option value=1><a>Light Blue</a></option>
+          <option value=2><a>Light Gold</a></option>
+        </select>
+      </div>
+    </span>
+  </main>
+
+</body>
+
+</html>
