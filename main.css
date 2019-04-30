@@ -278,7 +278,6 @@ code {
 
 select {
   background-color: var(--mainColor);
-  width: 25%;
   font-size: 1em;
   padding: calc((1rem * 0.5) + 1rem);
   margin-bottom: calc(1rem * 1.25);
